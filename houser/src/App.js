@@ -9,7 +9,6 @@ class App extends Component {
   render() {
     return <div>
         <Header />
-        {/* <Wizard/> */}
         {routes}
       </div>
     

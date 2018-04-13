@@ -7,12 +7,18 @@ export default class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
-      houses: []
+      houses: [1]
     }
   }
-getHouses() {
-  axios.get('/api/houses')
 
+  componentDidMount() {
+    this.getHouses()
+  }
+getHouses() {
+  axios.get('/api/houses').then(res => {
+    houses: res.data
+  })
+ 
 }
 
   render() {
