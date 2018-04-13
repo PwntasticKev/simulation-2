@@ -9,7 +9,11 @@ export default class Dashboard extends Component {
     this.state = {
       houses: [1]
     }
+    //BINDS//
+    this.getHouses = this.getHouses.bind(this)
+    //Bind
   }
+
 
   componentDidMount() {
     this.getHouses()
@@ -24,10 +28,10 @@ getHouses() {
   render() {
     return (
       <div>
-        <House />
-        {this.state.houses.map(house => {
+        <House houses={this.state.houses.map(house => {
           return <div key={house}>{this.state.house}</div>
-        })}
+        })}/>
+        
         </div>
       
         )
