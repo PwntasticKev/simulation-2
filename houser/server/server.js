@@ -9,7 +9,7 @@ require('dotenv').config()
 app.use(bodyParser.json())
 massive(process.env.connectionString).then(db => app.set('db', db))
 
-
+app.get('/api/houses')
 
 app.listen(port,() => {
   console.log(`Listening on port ${port}`)
