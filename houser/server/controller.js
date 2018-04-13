@@ -8,7 +8,7 @@ module.exports = {
     res.status(200).send(req.body)
   },
   delete: (req,res) => {
-    houses.splice(i,1)
+    houses.splice(i, 1)
     res.status(200).send(houses)
   }
 }

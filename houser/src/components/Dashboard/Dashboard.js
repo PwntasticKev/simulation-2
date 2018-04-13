@@ -25,7 +25,7 @@ getHouses() {
 }
 
 deleteHouse() {
-  axios.delete('/api/deletehouse:id').then(res => {
+  axios.delete('/api/deletehouse/:id').then(res => {
     this.setState({
       houses: res.data
     })

@@ -16,3 +16,21 @@ app.delete('/api/deletehouse:id', controller.delete)
 app.listen(port,() => {
   console.log(`Listening on port ${port}`)
 })
+
+
+
+
+
+//=============================
+//========SQL COMMANDS=========
+//=============================
+
+//Create Table
+// create table houses (id int serial KEY not null ,
+// name text,
+// address text, 
+// city text,
+// state text,
+// zipcode integer)
+
+//
