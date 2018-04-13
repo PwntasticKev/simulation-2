@@ -5,7 +5,7 @@ export default function House(props) {
   return (
     <div>
       {house}
-      <button>Delete</button>
+      
     </div>
   )
 }

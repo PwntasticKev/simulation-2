@@ -22,14 +22,24 @@ getHouses() {
   axios.get('/api/houses').then(res => {
     houses: res.data
   })
- 
+}
+
+deleteHouse() {
+  axios.delete('/api/deletehouse:id').then(res => {
+    this.setState({
+      houses: res.data
+    })
+    this.getHouses()
+  })
 }
 
 
 render() {
   let houses = this.state.houses.map(house => {
-     return( <div key={house.id}>{house}</div>
-  )})
+     return <div key={house.id}>
+         {house}
+         <button onClick={e => this.deleteHouse()}>Delete</button>
+       </div>})
     return <div>
         <House houseList={houses} />
         

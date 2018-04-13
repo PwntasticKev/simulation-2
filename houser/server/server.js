@@ -11,6 +11,7 @@ massive(process.env.connectionString).then(db => app.set('db', db))
 
 app.get('/api/houses', controller.houses)
 app.post('/api/houseinfo', controller.houseinfo)
+app.delete('/api/deletehouse:id', controller.delete)
 
 app.listen(port,() => {
   console.log(`Listening on port ${port}`)

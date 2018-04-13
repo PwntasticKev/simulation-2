@@ -63,6 +63,7 @@ export default class Wizard extends Component {
         <input type="text" placeholder="city" onChange={e => this.city(e)}/>
         <input type="text" placeholder="state" onChange={e => this.state(e)}/>
         <input type="text" placeholder="zipcode" onChange={e => this.zipcode(e)}/>
+        <button onClick={e => this.houseList()}>COMPLETE</button>
       </div>
   }
 }
