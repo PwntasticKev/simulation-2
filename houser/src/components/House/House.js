@@ -1,9 +1,11 @@
 import React from 'react'
 
-export default function House() {
+export default function House(props) {
+  let house = props.houseList
   return (
     <div>
-      house
+      {house}
+      <button>Delete</button>
     </div>
   )
 }

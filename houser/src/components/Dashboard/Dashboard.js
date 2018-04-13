@@ -7,7 +7,7 @@ export default class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
-      houses: [1]
+      houses: [1,5]
     }
     //BINDS//
     this.getHouses = this.getHouses.bind(this)
@@ -25,15 +25,14 @@ getHouses() {
  
 }
 
-  render() {
-    return (
-      <div>
-        <House houses={this.state.houses.map(house => {
-          return <div key={house}>{this.state.house}</div>
-        })}/>
+
+render() {
+  let houses = this.state.houses.map(house => {
+     return( <div key={house.id}>{house}</div>
+  )})
+    return <div>
+        <House houseList={houses} />
         
-        </div>
-      
-        )
+      </div>
   }
   }
