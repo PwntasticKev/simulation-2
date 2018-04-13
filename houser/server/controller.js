@@ -4,6 +4,7 @@ module.exports = {
     res.status(200).send(houses)
   },
   houseinfo: (req,res,next) => {
-    const {name, address, city, state, zipcode } = req.body
+    const {name, address, city, state, zipcode } = req.body;
+    res.status(200).send(req.body)
   }
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 export default class Wizard extends Component {
   constructor() {
@@ -39,6 +40,17 @@ export default class Wizard extends Component {
   zipcode(e) {
     this.setState({ 
       zipcode: e.target.value
+    })
+  }
+  houseList() {
+    axios.post('/api/houseinfo').then(res => {
+      this.setState({
+        name: res.data,
+        address: res.data,
+        city: res.data,
+        state: res.data,
+        zipcode: res.data
+      })
     })
   }
 
